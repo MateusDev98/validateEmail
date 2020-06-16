@@ -1,0 +1,16 @@
+<input type="email" name="email" id="email" placeholder="Digite seu e-mail"/>
+
+<button onClick="validateEmail()"> Enviar </button>
+
+<script>
+  var email = document.getElementById('email');
+
+const validateEmail = () => {
+  var valueEmail = email.value.toLowerCase();
+  if (valueEmail.match('gmail') || valueEmail.match('outlook') || valueEmail.match('hotmail')) {
+    console.log('E-mail enviado', email.value) 
+  } else {
+    alert('Adicione um e-mail válido')
+  }
+}
+</script>
